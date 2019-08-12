@@ -1,0 +1,127 @@
+.container {
+	width: 600px;
+	margin: auto;
+}
+
+section {
+	border: 2px solid #aaa;
+	padding: 1em;
+	margin-bottom: 1em;
+	background-color: white;
+}
+
+.color-grid {
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	grid-gap: 2em;
+}
+
+.color-grid > div {
+    height: 60px;
+    border-radius: 12px;
+	border: 1px solid var(--color-lt);
+}
+
+.color-grid > div:nth-child(1) {
+	background-color: var(--color-bg);
+}
+
+.color-grid > div:nth-child(2) {
+	background-color: var(--color-fg);
+}
+
+.color-grid > div:nth-child(3) {
+	background-color: var(--color-drk);
+}
+
+.color-grid > div:nth-child(4) {
+	background-color: var(--color-lt);
+}
+
+.color-grid > div:nth-child(5) {
+	background-color: var(--color-md-drk);
+}
+
+.color-grid > div:nth-child(6) {
+	background-color: var(--color-md-lt);
+}
+
+.color-grid > div:nth-child(7) {
+	background-color: var(--color-prim);
+}
+
+.color-grid > div:nth-child(8) {
+	background-color: var(--color-link);
+}
+
+.color-grid > div:nth-child(9) {
+	background-color: var(--color-info);
+}
+
+.color-grid > div:nth-child(10) {
+	background-color: var(--color-success);
+}
+	
+.color-grid > div:nth-child(11) {
+	background-color: var(--color-danger);
+}
+
+.color-grid > div:nth-child(12) {
+	background-color: var(--color-warning);
+}
+
+body {
+	background: rgb(204,255,255);
+background: -moz-linear-gradient(135deg, rgba(204,255,255,1) 0%, rgba(255,170,255,1) 100%);
+background: -webkit-linear-gradient(135deg, rgba(204,255,255,1) 0%, rgba(255,170,255,1) 100%);
+background: linear-gradient(135deg, rgba(204,255,255,1) 0%, rgba(255,170,255,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ccffff",endColorstr="#ffaaff",GradientType=1);
+}
+
+/* Page Footer */
+
+.page-footer {
+	border-top: 5px solid var(--color-warning);
+	color: var(--color-background);
+	display: flex;
+	justify-content: center
+}
+
+.page-footer h1, 
+.page-footer h2, 
+.page-footer h3, 
+.page-footer h4, 
+.page-footer h5, 
+.page-footer h6 {
+	color: var(--color-drk);
+}
+
+.page-footer > ul {
+	margin: 0;
+	padding: 0;
+	padding: 2em;
+	list-style-type: none;
+}
+
+.page-footer a {
+	color: var(--color-drk);
+	filter: none;
+}
+
+.page-footer a:link {
+	color: var(--color-drk);
+	filter: none;
+}
+
+.page-footer a:visited {
+	
+}
+
+.page-footer a:hover {
+	color: var(--color-lt);
+	filter: none;
+}
+
+.page-footer a:active {
+	
+}

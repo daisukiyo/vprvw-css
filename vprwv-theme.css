@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css?family=Cutive+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css?family=VT323&display=swap');
+
+:root {
+	/* Colors */
+	--color-bg: hsl(0, 0%, 100%);
+	--color-fg: hsl(0, 0%, 4%);
+	--color-drk: hsl(0, 0%, 21%);
+	--color-lt: hsl(0, 0%, 96%);
+	--color-md-lt: hsl(0, 0%, 86%);
+	--color-md-drk: hsl(0, 0%, 29%);
+    --color-prim: #CCAAFF;
+    --color-link: #CCDDFF;
+	--color-info: #CCFFFF;
+	--color-success: #CCFFCC;
+	--color-danger: #FFAAFF;
+	--color-warning: #FFFFCC;
+
+	/* Font Styles */
+	--font-size: 16px;
+    --font-line-height: 1;
+    
+	/* Font Stacks */
+	--font-cutive: 'Cutive Mono', monospace;
+	--font-vt: 'VT323', monospace;
+	
+	/* Layout */
+	--vertical-space: 1rem;
+}
+			

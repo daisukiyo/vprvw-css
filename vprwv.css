@@ -1,0 +1,688 @@
+body {
+	background-color: var(--color-background);
+	color: var(--color-foreground);
+	font-family: var(--font-cutive);
+	font-size: var(--font-size);
+	line-height: var(--font-line-height);
+	margin: 0px;
+}
+
+/* Text and Headings */
+
+p,
+.info,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0 0 var(--vertical-space) 0;
+	letter-spacing: .25em;
+}
+
+p:last-of-type {
+	margin-bottom: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: var(--color-md-dark);
+	font-family: var(--font-vt);
+	text-transform: uppercase;
+	background-color: var(--color-md-lt);
+	line-height: 1.25em;
+}
+
+h1 {
+	font-size: 2em;
+	margin: 0.67em 0;
+}
+
+h2 {
+	font-size: 1.8em;
+}
+
+h3 {
+	font-size: 1.5em;
+}
+
+h4 {
+	font-size: 1.3em;
+}
+
+h5 {
+	font-size: 1.1em;
+}
+
+h6 {
+	font-size: 1em;
+}
+
+b,
+strong {
+	color: var(--color-md-dark);
+	font-weight: bolder;
+	font-family: 'Times New Roman', Times, serif
+}
+
+em {
+	color: var(--color-dark);
+	font-family: 'Times New Roman', Times, serif;
+}
+
+.info {
+	background-color: var(--color-info);
+	color: var(--color-background);
+	padding: 1em;
+	border-radius: 0.5em;
+}
+
+.info p {
+	margin: 0;
+}
+
+
+/* Anchor Styles */
+
+a {
+	background-color: transparent;
+
+	color: var(--color-prim);
+	text-decoration: none;
+	transition: 200ms;
+}
+
+a:link {
+	/* color: var(--color-link);
+	text-decoration: underline; */
+}
+
+a:visited {
+	/* vendor prefixes! */
+	color: var(--color-prim);
+	filter: brightness(50%);
+	text-decoration: line-through;
+}
+
+a:hover {
+	/* vendor prefixes! */
+	filter: brightness(50%);
+}
+
+
+
+/* Form Elements and Controls */
+
+label>span {
+	display: block
+}
+
+input,
+label {
+	display: block;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+}
+
+button {
+	--weight: normal;
+	/* Remove the default styles */
+	border: 1px solid black;
+	font-family: var(--font-vt);
+	text-transform: uppercase;
+	color: inherit;
+	box-shadow: none;
+	background-color: var(--color-md-lt);
+	overflow: visible;
+	/* 1 */
+
+	/* Give the button a finger cursor */
+	cursor: pointer;
+	/* Style the button */
+	border-width: 1px;
+	border-style: solid;
+	/* Use padding to give the text some space */
+	padding: .1em 0.8em;
+	font-size: 1.25em;
+
+	/* Think about adding a transition */
+	/* transition: 200ms; */
+
+	/* Use some variables to control the appearance */
+	font-weight: var(--weight);
+	color: var(--color-light);
+	-webkit-box-shadow: inset 0px 0px 0px 1px var(--color-drk);
+   -moz-box-shadow:    inset 0px 0px 0px 1px var(--color-drk);
+   box-shadow:         inset 0px 0px 0px 1px var(--color-drk);
+}
+
+/* Style the interactive states of the button */
+button:hover {
+	/* Use the variables here */
+	/* background-color: var(--body-color); */
+	/* border-color: var(--background-color, var(--color-primary)); */
+	color: var(--background-color, var(--color-primary));
+}
+
+button:active {
+	background-color: var(--background-color, var(--color-primary));
+	color: var(--color-light);
+	/* Use filter to make the button darker */
+	-webkit-filter: brightness(80%);
+	-moz-filter: brightness(80%);
+	-ms-filter: brightness(80%);
+	-o-filter: brightness(80%);
+	filter: brightness(80%);
+}
+
+input[type=text],
+input[type=email],
+input[type=password],
+textarea {
+	display: inline-block;
+	--border-color: var(--color-md-drk);
+	padding: 0.7em 1em;
+	border: 1px solid var(--color-md-drk);
+	font-size: 1em;
+	font-family: var(--font-cutive);
+	/* Add a transition */
+	transition: 200ms;
+
+	/* 
+		This removes the accessibility outline 
+		which should never be removed
+		https://a11yproject.com/posts/never-remove-css-outlines/
+	*/
+	outline: none !important;
+}
+
+input[type=text]:focus,
+input[type=email]:focus,
+input[type=password]:focus,
+textarea:focus {
+	--border-color: var(--color-primary);
+}
+
+
+label {
+	display: inline-block;
+	margin: 0 0 1em 0;
+}
+
+label>span {
+	font-size: 0.75em;
+	display: block;
+	margin: 1em 0;
+}
+
+
+
+/* Switch Click 
+This switch is toggled on a click. The JavaScript 
+below adds or removes the class .on to change the 
+visual state of the switch. */
+
+.switch-2 {
+	width: 64px;
+	height: 32px;
+	border: 2px solid var(--color-prim);
+	background-color: var(--color-prim);
+	position: relative;
+	transition: 200ms;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.switch-2>input[type=checkbox] {
+	display: none;
+}
+
+.switch-2>div {
+	width: 28px;
+	height: 28px;
+	background-color: var(--color-danger);
+	margin: 2px;
+	position: absolute;
+	left: 0;
+	transition: 200ms
+}
+
+/* When the .switch has the class .on change the 
+color to green. */
+
+.switch-2 input:checked~div {
+	background-color: var(--color-success);
+}
+
+/* When the .switch has the .on class change the 
+position left to 40px. */
+
+.switch-2 input:checked~div {
+	left: 32px;
+}
+
+
+/* ---------------- */
+
+
+/* The container */
+.control-checkbox {
+	display: block;
+	position: relative;
+	padding-left: 35px;
+	margin-bottom: 12px;
+	cursor: pointer;
+	font-size: 22px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.control-checkbox input {
+	position: absolute;
+	opacity: 0;
+	cursor: pointer;
+	height: 0;
+	width: 0;
+}
+
+/* Create a custom checkbox */
+.control-checkbox>span {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 25px;
+	width: 25px;
+	background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.control-checkbox:hover input~.control-checkbox>span {
+	background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.control-checkbox input:checked~.control-checkbox>span {
+	background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.control-checkbox>span:after {
+	content: "";
+	position: absolute;
+	display: none;
+}
+
+/* Show the checkmark when checked */
+.control-checkbox input:checked~.control-checkbox>span:after {
+	display: block;
+}
+
+/* Style the checkmark/indicator */
+.control-checkbox>span:after {
+	left: 9px;
+	top: 5px;
+	width: 5px;
+	height: 10px;
+	border: solid white;
+	border-width: 0 3px 3px 0;
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+html {
+	line-height: 1.15;
+	/* 1 */
+	-ms-text-size-adjust: 100%;
+	/* 2 */
+	-webkit-text-size-adjust: 100%;
+	/* 2 */
+}
+
+dl dl,
+dl ol,
+dl ul,
+ol dl,
+ul dl {
+	margin: 0;
+}
+
+
+ol ol,
+ol ul,
+ul ol,
+ul ul {
+	margin: 0;
+}
+
+hr {
+	box-sizing: content-box;
+	/* 1 */
+	height: 0;
+	/* 1 */
+	overflow: visible;
+	/* 2 */
+}
+
+main {
+	display: block;
+}
+
+pre {
+	font-family: monospace, monospace;
+	/* 1 */
+	font-size: 1em;
+	/* 2 */
+}
+
+abbr[title] {
+	text-decoration: underline;
+	text-decoration: underline dotted;
+}
+
+code,
+kbd,
+samp {
+	font-family: monospace, monospace;
+	/* 1 */
+	font-size: 1em;
+	/* 2 */
+}
+
+small {
+	font-size: 80%;
+}
+
+audio,
+video {
+	display: inline-block;
+}
+
+audio:not([controls]) {
+	display: none;
+	height: 0;
+}
+
+img {
+	border-style: none;
+}
+
+svg:not(:root) {
+	overflow: hidden;
+}
+
+button,
+input,
+select {
+	margin: 0;
+}
+
+
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+	-webkit-appearance: button;
+}
+
+fieldset {
+	padding: 0.35em 0.75em 0.625em;
+}
+
+input {
+	overflow: visible;
+}
+
+legend {
+	box-sizing: border-box;
+	/* 1 */
+	color: inherit;
+	/* 2 */
+	display: table;
+	/* 1 */
+	max-width: 100%;
+	/* 1 */
+	white-space: normal;
+	/* 1 */
+}
+
+progress {
+	display: inline-block;
+	/* 1 */
+	vertical-align: baseline;
+	/* 2 */
+}
+
+select {
+	text-transform: none;
+}
+
+textarea {
+	margin: 0;
+	/* 1 */
+	overflow: auto;
+	/* 2 */
+}
+
+[type="checkbox"],
+[type="radio"] {
+	box-sizing: border-box;
+	/* 1 */
+	padding: 0;
+	/* 2 */
+}
+
+[type="search"] {
+	-webkit-appearance: textfield;
+	/* 1 */
+	outline-offset: -2px;
+	/* 2 */
+}
+
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+	height: auto;
+}
+
+/**
+   * Correct the text style of placeholders in Chrome, Edge, and Safari.
+   */
+
+::-webkit-input-placeholder {
+	color: inherit;
+	opacity: 0.54;
+}
+
+/**
+   * Remove the inner padding in Chrome, Edge, and Safari on macOS.
+   */
+
+::-webkit-search-decoration {
+	-webkit-appearance: none;
+}
+
+/**
+   * 1. Correct the inability to style upload buttons in iOS and Safari.
+   * 2. Change font properties to `inherit` in Safari.
+   */
+
+::-webkit-file-upload-button {
+	-webkit-appearance: button;
+	/* 1 */
+	font: inherit;
+	/* 2 */
+}
+
+/**
+   * Remove the inner border and padding of focus outlines in Firefox.
+   */
+
+::-moz-focus-inner {
+	border-style: none;
+	padding: 0;
+}
+
+/**
+   * Restore the focus outline styles unset by the previous rule in Firefox.
+   */
+
+:-moz-focusring {
+	outline: 1px dotted ButtonText;
+}
+
+/**
+   * Remove the additional :invalid styles in Firefox.
+   */
+
+:-moz-ui-invalid {
+	box-shadow: none;
+}
+
+/* Interactive
+   * ========================================================================== */
+
+/*
+   * Add the correct display in Edge 18- and IE.
+   */
+
+details {
+	display: block;
+}
+
+/*
+   * Add the correct styles in Edge 18-, IE, and Safari.
+   */
+
+dialog {
+	background-color: white;
+	border: solid;
+	color: black;
+	display: block;
+	height: -moz-fit-content;
+	height: -webkit-fit-content;
+	height: fit-content;
+	left: 0;
+	margin: auto;
+	padding: 1em;
+	position: absolute;
+	right: 0;
+	width: -moz-fit-content;
+	width: -webkit-fit-content;
+	width: fit-content;
+}
+
+dialog:not([open]) {
+	display: none;
+}
+
+/*
+   * Add the correct display in all browsers.
+   */
+
+summary {
+	display: list-item;
+}
+
+/* Scripting
+   * ========================================================================== */
+
+/**
+   * Add the correct display in IE 9-.
+   */
+
+canvas {
+	display: inline-block;
+}
+
+/**
+   * Add the correct display in IE.
+   */
+
+template {
+	display: none;
+}
+
+/* User interaction
+   * ========================================================================== */
+
+/**
+   * Add the correct display in IE 10-.
+   */
+
+[hidden] {
+	display: none;
+}
+
+.navbar {
+	display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+	align-items: baseline;
+	background-color:#C0C0C0;
+	padding: 4px;
+	box-shadow: 1px 1px;
+	border: .25px solid var(--color-md-drk);
+}
+
+.navbar > ul {
+	margin: 0;
+    padding: 0;
+	list-style-type: none;
+	display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+	align-items: baseline;
+}
+
+.navbar a {
+	border: .25px solid var(--color-md-drk);
+	color: black;
+	margin: 2px;
+	font-family: var(--font-vt);
+	padding: 2px;
+	box-shadow: 1px 1px;
+}
+
+.navbar .nav-title {
+	background-color:none;	
+	padding-right: 2px;
+	display: flex;
+}
+
+.navbar .nav-link {
+	display: block;
+	text-overflow: ellipsis;
+	width: 125px;
+	white-space: nowrap;
+	overflow: hidden;
+
+}
+
+
+.navbar a:link {
+
+}
+.navbar a:visited {
+
+}
+.navbar a:hover {
+
+}
+.navbar a:active {
+
+}
